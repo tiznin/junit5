@@ -20,7 +20,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 public class TestYaozaString {
 
 	@ParameterizedTest(name = "run #{index} with [{arguments}]")
-	@ValueSource(strings = { "Hello", "JUnit" })
+	@ValueSource(strings = { "Hellox", "JUnit" })
 	public void isEmptyString(String theInstance) {
 		Assertions.assertFalse(YaozaString.isEmptyString(theInstance));
 	}
