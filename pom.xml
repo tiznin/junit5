@@ -6,6 +6,15 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
+	
+<distributionManagement>
+   <repository>
+     <id>github</id>
+     <name>GitHub OWNER Apache Maven Packages</name>
+     <url>https://maven.pkg.github.com/tiznin/junit5</url>
+   </repository>
+</distributionManagement>
+	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -17,6 +26,7 @@
 
 	</properties>
 
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.junit.platform</groupId>
