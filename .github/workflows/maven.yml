@@ -14,5 +14,8 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
+      run: mvn package --file pom.xml
+    - name: deploy
       evn: GITHUB_TOKEN: ${{ secrets.var_token_for_publish_to_github }}
-      run: mvn -Dregistry=https://maven.pkg.github.com/tiznin/junit5 -Dtoken=$GITHUB_TOKEN package deploy --file pom.xml
+      run: mvn -Dregistry=https://maven.pkg.github.com/tiznin -Dtoken=$GITHUB_TOKEN deploy --file pom.xml
+
