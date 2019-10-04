@@ -19,7 +19,7 @@ jobs:
       run: |
         mkdir ~/.m2
         echo "<settings><servers><server><id>github</id><username>tiznin</username><password>${GITHUB_TOKEN}</password></server></servers></settings>" > ~/.m2/settings.xml
-    - name: Build with Maven
+    - name: Build with Maven and deploy
       run: mvn package
     - name: deploy
-      run: mvn deploy
+      run: mvn -X deploy
