@@ -22,4 +22,4 @@ jobs:
     - name: Build with Maven and deploy
       run: mvn package
     - name: deploy
-      run: mvn -X deploy
+      run: mvn -X -Dregistry=https://maven.pkg.github.com/tiznin deploy
